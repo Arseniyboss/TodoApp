@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+:root {
+  --primary-color: #fff;
+}
+
+body {
+  background: #9d0ad8;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  position: relative;
+  background: #5b0b9c;
+  display: flex;
+  flex-direction: column;
+  width: 530px;
+  min-height: 550px;
+  text-align: center;
+  border-radius: 10px;
+  padding-bottom: 1rem;
+  margin: 140px auto;
+}
+
+h1 {
+  margin-top: 1.2rem;
+  color: var(--primary-color);
+  font-size: 1.7rem;
+}
+
+input[type="text"] {
+  border: none;
+  outline: none;
+}
+
+input[type="text"]::placeholder {
+  color: inherit;
+}
+
+.add-form input[type="text"] {
+  padding: 1rem;
+  margin-top: 0.5rem;
+  border-radius: 4px;
+  width: 320px;
+  background: #6711b8;
+  color: var(--primary-color);
+}
+
+.add-form input[type="text"]:nth-of-type(2) {
+  margin-bottom: 1rem;
+}
+
+.add-form input[type="text"]:focus {
+  border: 1px solid hsl(180, 80%, 50%);
+  padding: 15px;
+}
+
+.add-form button {
+  padding: 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  background: orange;
+  color: var(--primary-color);
+}
+
+.add-form button:nth-of-type(1) {
+  margin: 0 1rem;
+}
+
+.add-form button:nth-of-type(2) {
+  background: red;
+}
+
+.todo {
+  border: none;
+  outline: none;
+  color: var(--primary-color);
+  background: #622abd;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px auto;
+  padding: 1rem;
+  width: 90%;
+  border-radius: 5px;
+}
+
+.todo input[type="text"] {
+  font-size: inherit;
+  color: inherit;
+  background: transparent;
+  width: 400px;
+  margin-top: 1px;
+}
+
+.icons {
+  cursor: pointer;
+}
+
+.trashcan {
+  margin-right: 10px;
+}
+
+.check {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 736px) and (max-height: 823px) {
+  .App {
+    width: 330px;
+    min-height: 400px;
+  }
+
+  button {
+    margin-bottom: 1rem;
+  }
+
+  .todo {
+    font-size: 1rem;
+  }
+
+  .todo input[type="text"] {
+    width: 230px;
+  }
+}
